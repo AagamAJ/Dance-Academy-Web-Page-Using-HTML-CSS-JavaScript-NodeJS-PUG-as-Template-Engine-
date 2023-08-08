@@ -1,0 +1,68 @@
+//- now extending(filling) the previously written pug template inheritance 'base.pug'
+//- template inheritance me semicolons(';') use nahi krte hai
+
+extends base.pug
+
+//- 'base.pug' me jo block script hai usme ye script add karo
+block scripts
+    script(src="../static/index.js")
+//- yaha pe semicolon(';') use nahi krna hai
+
+//- 'base.pug' me jo block style hai usme ye style add karo
+block style
+    style
+        include ../static/style.css
+
+block content
+
+    section#introSection
+        div AJ Dance Academy
+        div.small <u>Eat</u> • <u>Sleep</u> • <u>Dance</u> • <u> Repeat </u>
+        div#end-introSection
+    section#mission
+        h1 <u> Our Mission </u>
+        div#cards-container
+            div.cards-1
+                h2 Dance Sessions
+                ul
+                    li Various Styles Taught
+                    li Group Dancing
+                    li Solo Dancing
+            div.cards-2
+                h2 Expert Training
+                ul 
+                    li Experienced Trainers 
+                    li Professional Career Insights
+                    li Specialized Dance Genres
+            div.cards-3
+                h2 Meditation
+                ul 
+                    li Stress Reduction
+                    li Relaxation
+                    li Mind-Body Connection
+    
+    section#style
+        h1 <u> Dance Styles </u>
+        div#style-container
+            div.box-1
+                h2 Ballet Style
+            div.box-2
+                h2 Hip-Hop Style
+            div.box-3
+                h2 Indian Dance Forms
+
+    section#sponsorsSection
+        h1 <u> Our Sponsors </u>
+        div.sponsors
+            div.item-1
+                img(src="../static/adidas.png", alt="Adidas- Fitness Sponsor")
+            div.item-2
+                img(src="../static/apple.png", alt="Apple- Technology Partner")
+            div.item-3
+                img(src="../static/lenskart.png", alt="Lenskart- Eyewear Partner")
+            div.item-4
+                img(src="../static/netflix.png", alt="Netflix- BroadCasting Partner")
+            div.item-5
+                img(src="../static/swiggy.png", alt="Swiggy- Food Partner")
+            div.item-6
+                img(src="../static/lacoste.png", alt="Lacoste- Style Partner")

@@ -1,0 +1,27 @@
+//- creating a base template inheritance for pug content to be used in the various pages of a WebSite
+
+doctype html
+html
+    head
+        title AJ Dance Academy
+        block scripts
+        block style
+    body
+        nav#navbar
+            ul
+                div#logo 
+                    img(src="../static/logo.png", alt="AJ Dance Academy")
+                    | AJDA
+                //- li Home     // adding list items normally
+                div#dot 
+                    |•
+                //- to add anchor tag inside our list items in pug, then we do it in this way:-
+                li #[a(href="/home") Home]
+                li #[a(href="/#end-introSection") Our Mission]
+                li #[a(href="/#style") Dance Styles]
+                li #[a(href="/contact") Contact Us]
+        hr
+    
+        block content
+        footer#footer
+            u CopyRight&copy www.ajdanceacademy.in &nbsp; All Rights Reserved

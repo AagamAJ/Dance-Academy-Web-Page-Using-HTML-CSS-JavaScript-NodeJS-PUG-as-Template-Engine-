@@ -1,0 +1,80 @@
+doctype html
+html
+    head
+        title AJ Dance Academy
+        style 
+            include ../static/style.css
+    
+    body
+        nav#navbar
+            ul
+                div#logo 
+                    img(src="../static/logo.png", alt="AJ Dance Academy")
+                    | AJDA
+                //- li Home     // adding list items normally
+                div#dot 
+                    |•
+                //- to add anchor tag inside our list items in pug, then we do it in this way:-
+                li #[a(href="/home") Home]
+                li #[a(href="/") About Us]
+                li #[a(href="/") Our Services]
+                li #[a(href="/contact") Contact Us]
+        hr
+        
+        section#introSection
+            div AJ Dance Academy
+            div.small <u>Eat</u> • <u>Sleep</u> • <u>Dance</u> • <u> Repeat </u>
+        
+        section#mission
+            h1 <u> Our Mission </u>
+            div#cards-container
+                div.cards-1
+                    h2 Dance Sessions
+                    ul
+                        li Various Styles Taught
+                        li Group Dancing
+                        li Solo Dancing
+                div.cards-2
+                    h2 Expert Training
+                    ul 
+                        li Experienced Trainers 
+                        li Professional Career Insights
+                        li Specialized Dance Genres
+                div.cards-3
+                    h2 Meditation
+                    ul 
+                        li Stress Reduction
+                        li Relaxation
+                        li Mind-Body Connection
+        
+        section#style
+            h1 <u> Dance Styles </u>
+            div#style-container
+                div.box-1
+                    h2 Ballet Style
+                div.box-2
+                    h2 Hip-Hop Style
+                div.box-3
+                    h2 Indian Dance Forms
+
+        section#sponsorsSection
+            h1 <u> Our Sponsors </u>
+            div.sponsors
+                div.item-1
+                    img(src="../static/adidas.png", alt="Adidas - Fitness Sponsor")
+                div.item-2
+                    img(src="../static/apple.png", alt="Apple - Technology Partner")
+                div.item-3
+                    img(src="../static/lenskart.png", alt="Lenskart - Eyewear Partner")
+                div.item-4
+                    img(src="../static/netflix.png", alt="Netflix - BroadCasting Partner")
+                div.item-5
+                    img(src="../static/swiggy.png", alt="Swiggy - Food Partner")
+                div.item-6
+                    img(src="../static/lacoste.png", alt="Lacoste - Style Partner")
+
+        footer#footer 
+            u CopyRight&copy www.ajdanceacademy.in &nbsp; All Rights Reserved
+        
+        script
+            include ../static/index.js
